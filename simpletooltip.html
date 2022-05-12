@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Degrading tooltips</title>
+        <link rel="stylesheet" href="iw_examples.css"/>
+        <meta charset="utf-8"/>
+<!--
+
+WEB EGINEERING COURSE - University of L'Aquila 
+
+Thi example shows how javascript tooltips can gracefully degrade to html tooltips.
+See the course homepage: http://www.di.univaq.it/gdellape/students.php
+
+-->
+
+    <style type="text/css">
+	.hidewithcss {
+		display: none;
+	}
+	
+	.withtooltip {
+		border-bottom-width: 1px;
+		border-bottom-style: dashed;	
+		cursor: help;
+		position: relative;
+		text-decoration: none;
+		color: black;
+	}	
+	
+	.tooltip {
+		display: none;	
+		position: absolute;
+		z-index:5;
+		width: 120px;
+		max-width: 120px;
+		height: auto;
+		left: 1.5em;
+		top: 1.5em;
+		border: 1px solid black;
+		background-color: yellow;
+		color: black;
+		font-size: 80%;
+		overflow: hidden;
+	}
+	
+	.withtooltip:hover .tooltip {
+		display: block;	
+	}
+	</style>
+    <script type="text/javascript" src="simpletooltip.js"></script>
+  </head>
+  <body>
+    <h1 class="sezione">Degrading tooltips</h1>
+    <p>The next section contains two tooltips created using the
+    html title attribute.</p>
+    <p>This test text contains a 
+    <span class="withtooltip"
+    title="A tooltip is, literally, a suggestion associated to a tool">
+    tooltip</span> to show how you can create 
+    <span title="i.e., that works well even without javascript and css"
+    class="withtooltip"> degrading</span> tooltips using javascript
+    and css</p>
+    <p>The next section contains two tooltips made with a simple
+    CSS technique. These tooltips can contain formatting and even
+    images or tables! The second one implements a tachnique that
+    makes it compatible even with older versions of Internet
+    Explorer, which recognize the :hover pseudo-class only on
+    anchors.</p>
+    <p>This test text contains a 
+    <span class="withtooltip"> tooltip 
+    <span class="tooltip"> 
+    <span class="hidewithcss">(</span>A tooltip is, literally, 
+    <b>a suggestion associated to a tool</b>
+    <span class="hidewithcss">)</span></span></span> to show how you
+    can create 
+    <a href="javascript:void(0)" class="withtooltip">degrading 
+    <span class="tooltip">
+    <span class="hidewithcss">(</span> i.e., that works well even 
+    <i>without javascript and css</i>
+    <span class="hidewithcss">)</span></span></a> tooltip using
+    javascript and css</p>
+    <p>Finally, the following section contains two tooltips made,
+    respectively, with the title attribute and with the CSS
+    technique described above, but which are dynamically modified
+    by javascript, if scripting is activated, to obtain a different
+    and more complex result.</p>
+    <p id="jstest">This test text contains a 
+    <span class="withtooltip" title="A tooltip is, literally, <b>a suggestion associated to a tool</b>">
+     tooltip</span> to show how you can create 
+    <span class="withtooltip"> degrading 
+    <span class="tooltip"> 
+    <span class="hidewithcss">(</span> i.e., that works well even 
+    <i>without javascript and css</i>
+    <span class="hidewithcss">)</span></span></span> tooltip using
+    javascript and css</p>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 # JS_Example_simpletooltip
 > Standard, CSS-based and Javascript-based degrading tooltips
 
-This example shows several examples of tooltips, implemented using browser standard attributes, gracefully degrading CSS (for better styles tooltips) and gracefully degrading Javascript (for better control on the tooltip display process).
+This example shows several examples of tooltips, implemented using browser standard attributes, gracefully degrading CSS (for better styled tooltips) and gracefully degrading Javascript (for better control on the tooltip behaviour).
 
 ## Usage
 
